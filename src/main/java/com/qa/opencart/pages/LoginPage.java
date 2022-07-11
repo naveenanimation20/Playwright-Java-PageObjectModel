@@ -32,10 +32,13 @@ public class LoginPage {
 		page.fill(emailId, appUserName);
 		page.fill(password, appPassword);
 		page.click(loginBtn);
-		if(page.isVisible(logoutLink)) {
+		page.locator(logoutLink).waitFor();
+		if(page.locator(logoutLink).isVisible()) {
 			System.out.println("user is logged in successfully....");
 			return true;
+		}else {
+			System.out.println("user is not logged in successfully....");
+			return false;
 		}
-		return false;
 	}
 }
