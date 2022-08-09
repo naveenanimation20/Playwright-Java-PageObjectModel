@@ -17,6 +17,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<extentreports-version>5.0.8</extentreports-version>
+
 	</properties>
 
 	<dependencies>
@@ -24,7 +26,7 @@
 		<dependency>
 			<groupId>com.microsoft.playwright</groupId>
 			<artifactId>playwright</artifactId>
-			<version>1.22.0</version>
+			<version>1.23.0</version>
 		</dependency>
 
 		<dependency>
@@ -32,6 +34,14 @@
 			<artifactId>testng</artifactId>
 			<version>6.14.3</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>${extentreports-version}</version>
+		</dependency>
+
+		
 
 	</dependencies>
 
