@@ -52,21 +52,22 @@ public class PlaywrightFactory {
 
 		switch (browserName.toLowerCase()) {
 		case "chromium":
-			//browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
 			tlBrowser.set(getPlaywright().chromium().launch(new BrowserType.LaunchOptions().setHeadless(false)));
 			break;
 		case "firefox":
-			//browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
 			tlBrowser.set(getPlaywright().firefox().launch(new BrowserType.LaunchOptions().setHeadless(false)));
 			break;
 		case "safari":
-			//browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
 			tlBrowser.set(getPlaywright().webkit().launch(new BrowserType.LaunchOptions().setHeadless(false)));
 			break;
 		case "chrome":
-			//browser = playwright.chromium().launch(new LaunchOptions().setChannel("chrome").setHeadless(false));
-			tlBrowser.set(getPlaywright().chromium().launch(new LaunchOptions().setChannel("chrome").setHeadless(false)));
+			tlBrowser.set(
+					getPlaywright().chromium().launch(new LaunchOptions().setChannel("chrome").setHeadless(false)));
 			break;
+		case "edge":
+			tlBrowser.set(
+					getPlaywright().chromium().launch(new LaunchOptions().setChannel("msedge").setHeadless(false)));
+			break;	
 
 		default:
 			System.out.println("please pass the right browser name......");
@@ -98,18 +99,16 @@ public class PlaywrightFactory {
 		return prop;
 
 	}
-	
+
 	/**
 	 * take screenshot
 	 * 
 	 */
-	
+
 	public static String takeScreenshot() {
 		String path = System.getProperty("user.dir") + "/screenshot/" + System.currentTimeMillis() + ".png";
 
-		getPage().screenshot(new Page.ScreenshotOptions()
-				  .setPath(Paths.get(path))
-				  .setFullPage(true));
+		getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(true));
 		return path;
 	}
 
