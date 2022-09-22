@@ -32,7 +32,7 @@
 		</classes>
 	</test>
 
-	<test name="Open Cart Login Page Test_edge">
+	<test name="Open Cart Login Page Test_edge1">
 		<parameter name="browser" value="edge" />
 		<classes>
 			<class name="com.qa.opencart.tests.LoginPageTest" />
