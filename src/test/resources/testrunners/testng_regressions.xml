@@ -11,7 +11,7 @@
 	</listeners>
 
 	<test name="Open Cart Home Page Test_chrome">
-		<parameter name="browser" value="chrome" />
+		<parameter name="browser" value="chromium" />
 		<classes>
 			<class name="com.qa.opencart.tests.HomePageTest" />
 		</classes>
@@ -26,7 +26,7 @@
 
 
 	<test name="Open Cart Home Page Test_chrome1">
-		<parameter name="browser" value="chrome" />
+		<parameter name="browser" value=""chromium"" />
 		<classes>
 			<class name="com.qa.opencart.tests.HomePageTest" />
 		</classes>
