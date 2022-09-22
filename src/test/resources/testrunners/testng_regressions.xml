@@ -26,7 +26,7 @@
 
 
 	<test name="Open Cart Home Page Test_chrome1">
-		<parameter name="browser" value=""chromium"" />
+		<parameter name="browser" value="chromium" />
 		<classes>
 			<class name="com.qa.opencart.tests.HomePageTest" />
 		</classes>
