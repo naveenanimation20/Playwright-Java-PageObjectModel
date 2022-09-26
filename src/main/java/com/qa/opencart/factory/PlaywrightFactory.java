@@ -109,12 +109,12 @@ public class PlaywrightFactory {
 	public static String takeScreenshot() {
 		String path = System.getProperty("user.dir") + "/screenshot/" + System.currentTimeMillis() + ".png";
 
-		getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(true));
+		//getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(true));
 		
-//		byte[] buffer = getPage().screenshot();
-//		System.out.println(Base64.getEncoder().encode(buffer));
-		
-		return path;
+		byte[] buffer = getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(true));
+		System.out.println(Base64.getEncoder().encodeToString(buffer));
+		String baseaPath = Base64.getEncoder().encodeToString(buffer);
+		return baseaPath;
 	}
 
 }
