@@ -17,12 +17,12 @@
 		</classes>
 	</test>
 
-	<!-- <test name="Open Cart Login Page Test_edge">
-		<parameter name="browser" value="edge" />
+	<test name="Open Cart Login Page Test_safari">
+		<parameter name="browser" value="safari" />
 		<classes>
 			<class name="com.qa.opencart.tests.LoginPageTest" />
 		</classes>
-	</test> -->
+	</test>
 
 
 	<test name="Open Cart Home Page Test_chromium">
