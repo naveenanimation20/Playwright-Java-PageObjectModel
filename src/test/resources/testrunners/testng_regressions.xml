@@ -25,12 +25,12 @@
 	</test>
 
 
-	<test name="Open Cart Home Page Test_chromium">
+	<!-- <test name="Open Cart Home Page Test_chromium">
 		<parameter name="browser" value="chromium" />
 		<classes>
 			<class name="com.qa.opencart.tests.LoginPageTest" />
 		</classes>
-	</test>
+	</test> -->
 
 	<!-- <test name="Open Cart Login Page Test_edge1">
 		<parameter name="browser" value="edge" />
